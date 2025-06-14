@@ -99,7 +99,7 @@ echo "Buildozer version:" && buildozer --version
 echo "Cython version:" && python -m Cython --version
 
 echo "✅ Entorno configurado correctamente. Usa 'source kivy_env/bin/activate' para activarlo."
-```
+
 
         1.2 "Use source kivy_env/bin/activate" on the terminal to activate the virtual environment
 
