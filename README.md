@@ -112,6 +112,7 @@ echo "✅ Entorno configurado correctamente. Usa 'source kivy_env/bin/activate' 
 
    1.6 Now we continue with the building proccess that was interrupted before because of the error: Execute "buildozer android debug --arch=arm64-v8a"
 
+   1.7 An apk should be generated in the bin repository, you cant just copy that on your android device and execute it.
 
 
 ## 2. (This is just extra info, you can ignore it) If you want to know more about the proccess and maybe apply it to your own case:
