@@ -3,7 +3,7 @@
 
  => The application on main.py just creates an instance of pyboy that runs an open source .gbc game, takes a frame and prints it on the bottom left corner of the mobile screen, as an indicator that it is working properly.
 
- ![screenshot](screenshot.jpg)
+<img src="screenshot.jpg" alt="screenshot" width="400"/>
 
  !¡ Buildozer is not supported on windows so either use linux (I'm using ubuntu with KDE plasma (its great, try it!!))
  Or you can use Windows Subsystem for Linux which also works great.
