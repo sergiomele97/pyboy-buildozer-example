@@ -1,4 +1,7 @@
- This is a basic example of how to build a pyboy application for android using buildozer (kivi framework).
+
+ This is a basic example of how to build a pyboy application that runs on android using buildozer (kivi framework).
+
+ The application on main.py just creates an instance of pyboy that runs an open source .gbc game, takes a frame and prints it on the bottom left corner of the mobile screen, as an indicator that it is working properly.
 
  Buildozer is not supported on windows so either use linux (I'm using ubuntu with KDE plasma (its great, try it!!))
  Or you can use Windows Subsystem for Linux which also works great. => Ask chatgpt how to install buildozer on your system.
