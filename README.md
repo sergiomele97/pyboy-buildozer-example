@@ -15,7 +15,6 @@
 ```
 # ACTUALIZAR SISTEMA
 sudo apt update && sudo apt upgrade -y
-
 # INSTALAR DEPENDENCIAS DEL SISTEMA
 sudo apt install -y \
     build-essential \
@@ -39,18 +38,14 @@ sudo apt install -y \
     libjpeg-dev \
     adb \
     curl
-
 # ACTUALIZAR pip A 25.1.1 CONCRETAMENTE
 python3.10 -m pip install --upgrade pip==25.1.1
-
 # CREAR ENTORNO VIRTUAL
 python3.10 -m venv kivy_env
 source kivy_env/bin/activate
-
 # VERIFICAR VERSIONES
 echo "Python version:" && python --version
 echo "Pip version:" && pip --version
-
 # INSTALAR LIBRERÍAS EXACTAS DESDE AQUÍ
 pip install \
     appdirs==1.4.4 \
@@ -93,32 +88,31 @@ pip install \
     typing_extensions==4.14.0 \
     urllib3==2.4.0 \
     virtualenv==20.31.2
-
 # VERIFICAR INSTALACIÓN DE BUILDOZER Y CYTHON
 echo "Buildozer version:" && buildozer --version
 echo "Cython version:" && python -m Cython --version
-
 echo "✅ Entorno configurado correctamente. Usa 'source kivy_env/bin/activate' para activarlo."
 
+```
 
-        1.2 "Use source kivy_env/bin/activate" on the terminal to activate the virtual environment
+   1.2 "Use source kivy_env/bin/activate" on the terminal to activate the virtual environment
 
-        1.3 Download the github repository and navigate to the src directory (which has the buildozer.spec) on the terminal
+   1.3 Download the github repository and navigate to the src directory (which has the buildozer.spec) on the terminal
 
-        1.4 Execute "buildozer android debug --arch=arm64-v8a" !!! THIS IS EXPECTED TO FAIL !!! we will patch it in the next step.
+   1.4 Execute "buildozer android debug --arch=arm64-v8a" !!! THIS IS EXPECTED TO FAIL !!! we will patch it in the next step.
 
             # Note: the first time it takes a while, it gets fastter after that, go do another thing meanwhile.
 
             => On this step we are looking for the "buildozerPyboyExample/src/.buildozer/android/platform/build-arm64-v8a/build/other_builds/"
             other_builds director to be created with all the original dependencies.
 
-        1.5 Now we will apply the changes to the source code so it compiles on buildozer: Copy the contents of the other_builds directory which is at the root of the repository (In the same directory as this readme) into the "buildozerPyboyExample/src/.buildozer/android/platform/build-arm64-v8a/build/other_builds/" directory.
+   1.5 Now we will apply the changes to the source code so it compiles on buildozer: Copy the contents of the other_builds directory which is at the root of the repository (In the same directory as this readme) into the "buildozerPyboyExample/src/.buildozer/android/platform/build-arm64-v8a/build/other_builds/" directory.
 
-        1.6 Now we continue with the building proccess that was interrupted before because of the error: Execute "buildozer android debug --arch=arm64-v8a"
+   1.6 Now we continue with the building proccess that was interrupted before because of the error: Execute "buildozer android debug --arch=arm64-v8a"
 
 
 
-    2. (This is just extra info, you can ignore it) If you want to know more about the proccess and maybe apply it to your own case:
+## 2. (This is just extra info, you can ignore it) If you want to know more about the proccess and maybe apply it to your own case:
 
         # We did several modifications to the buildozer.spec file:
 
