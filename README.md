@@ -1,10 +1,10 @@
 
- This is a basic example of how to build a pyboy application that runs on android using buildozer (kivi framework).
+ # This is a basic example of how to build a pyboy application that runs on android using buildozer (kivi framework).
 
- The application on main.py just creates an instance of pyboy that runs an open source .gbc game, takes a frame and prints it on the bottom left corner of the mobile screen, as an indicator that it is working properly.
+ => The application on main.py just creates an instance of pyboy that runs an open source .gbc game, takes a frame and prints it on the bottom left corner of the mobile screen, as an indicator that it is working properly.
 
- Buildozer is not supported on windows so either use linux (I'm using ubuntu with KDE plasma (its great, try it!!))
- Or you can use Windows Subsystem for Linux which also works great. => Ask chatgpt how to install buildozer on your system.
+ !¡ Buildozer is not supported on windows so either use linux (I'm using ubuntu with KDE plasma (its great, try it!!))
+ Or you can use Windows Subsystem for Linux which also works great.
 
  2 options:
  
@@ -135,6 +135,8 @@ echo "✅ Entorno configurado correctamente. Usa 'source kivy_env/bin/activate' 
     Beware if you buildozer clean, you will lose all your changes in this directory.
 
     After changing anything on other builds, I delete the dist directory and the app directory, so the changes have an effect.
+    
+    Also, deleting some directories from the python_installs directory also helps the changes in other_builds to take effect.
 
 
 
@@ -149,7 +151,6 @@ Distributor ID: Ubuntu
 Description:    Ubuntu 24.04.2 LTS
 Release:        24.04
 
-Im using a virtual environment (environment for python where you can install install things completely isolated from your computer global installations, its a very common thing when using python, you should do it too, ask chatgpt)
 My virtual environment or venv as the following things installed:
 
 Python 3.10.17
