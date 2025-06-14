@@ -6,6 +6,8 @@
  !¡ Buildozer is not supported on windows so either use linux (I'm using ubuntu with KDE plasma (its great, try it!!))
  Or you can use Windows Subsystem for Linux which also works great.
 
+ To make things easier, I have the other_builds folder on the root of this repository, so this is kind of heavy when you download it.
+
  2 options:
  
  # 1. If you just want to reproduce it FAST:
