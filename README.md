@@ -4,9 +4,9 @@
  Or you can use Windows Subsystem for Linux which also works great. => Ask chatgpt how to install buildozer on your system.
 
  2 options:
-
-    1. If you just want to reproduce it FAST:
-        1.1 open you terminal and execute this to create a virtual environment with all the dependencies
+ 
+ # 1. If you just want to reproduce it FAST:
+       1.1 open you terminal and execute this to create a virtual environment with all the dependencies
 
 
 ```
