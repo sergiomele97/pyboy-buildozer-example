@@ -131,11 +131,15 @@ echo "✅ Entorno configurado correctamente. Usa 'source kivy_env/bin/activate' 
 
         # We compiled ("buildozer android debug --arch=arm64-v8a"): find a problem => change the source code on other_build => iterate
 
-I believe the next list covers all the changes I did on the source code in other builds:
+### I believe the next list covers all the changes I did on the source code in other builds:
   => pyjnius and kivy: I eliminated all the "long" uses (an integer variable type which is not supported on modern cython versions). I either eliminated it directly bc it was redundant in its context, or added "from ctypes import c_long as long" in some kivy files.
+  
   => I deleted the "legacy_implicit_noexcept" in setup.py from pyboy.
+  
   => Had to manually copy time.pxd from cython because it was failing to copy itself to: .buildozer/android/platform/build-arm64-v8a/build/other_builds/hostpython3/desktop/hostpython3/native-build/Lib/site-packages/Cython/Includes/cpython/
+  
   => Had some issues on mb.pxd, pyboy.py (and maybe others i dont remember) from pyboy, mainly because of how the strings are built in the error.loggers, had to either migrate them to the [f"this is and error log {this_is_a_variable}"] f-strings syntax, or eliminate them. example of Not supported string build: logger.error("State file not found: %s", state_path)
+  
   => Had to add the 2 bootrom_cgb.bin like files to the root on buildozer directory and add a change on the bootrom.py file from pyboy, so it does look for them 4 directories before where it does by default.
 
 
