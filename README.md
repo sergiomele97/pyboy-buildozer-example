@@ -99,13 +99,13 @@ echo "✅ Entorno configurado correctamente. Usa 'source kivy_env/bin/activate' 
 
 ```
 
-   1.2 "Use source kivy_env/bin/activate" on the terminal to activate the virtual environment
+   1.2 Use "source kivy_env/bin/activate" on the terminal to activate the virtual environment
 
-   1.3 Download the github repository and navigate to the src directory (which has the buildozer.spec) on the terminal
+   1.3 Download the github repository and navigate to the src directory (which has the buildozer.spec) on the terminal: "git clone https://github.com/sergiomele97/pyboy-buildozer-example" (it is a heavyrepository as it has the other_builds repository) and then: "cd src"
 
    1.4 Execute "buildozer android debug --arch=arm64-v8a" !!! THIS IS EXPECTED TO FAIL !!! we will patch it in the next step.
 
-            # Note: the first time it takes a while, it gets fastter after that, go do another thing meanwhile.
+            # Note: the first time, buildozer takes a while, it gets fastter after that, go do another thing meanwhile.
 
             => On this step we are looking for the "buildozerPyboyExample/src/.buildozer/android/platform/build-arm64-v8a/build/other_builds/"
             other_builds director to be created with all the original dependencies.
